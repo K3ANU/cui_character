@@ -20,6 +20,17 @@
 	width: 30px;
 }
 
+.direct-go {
+    width: 45px;
+    height: 15px;
+    font-size: 10px;
+    outline: none;
+    border-radius: 0.5vh 0.5vh 0.5vh 0.5vh;
+    background: #ffffff33;
+    color: #fff;
+    border: 0.5px solid #ffffff00;
+}
+
 h2, h3 {
     margin: 0;
     padding-top: 0.5vh;
