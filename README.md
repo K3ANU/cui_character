@@ -19,7 +19,7 @@ with
 
 ```TriggerEvent('cui_character:loadClothes', data, charPed)```
 
-**In qb-apartments/fxmanifest.lua in dependencies replace:**
+**In qb-apartments/fxmanifest.lua & qb-houses/fxmanifest.lua in dependencies replace:**
 
 ```'qb-clothing',```
 
