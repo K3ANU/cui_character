@@ -1,5 +1,4 @@
-QBCore = nil
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+local QBCore = exports['qb-core']:GetCoreObject()
 
 -- Money Stuff
 
@@ -20,8 +19,7 @@ end)
 
 -- Save Skin
 
-RegisterServerEvent('cui_character:save')
-AddEventHandler('cui_character:save', function(model, data)
+RegisterServerEvent('cui_character:save', function(model, data)
     local _source = source
     local Player = QBCore.Functions.GetPlayer(_source)
     local citizenid = Player.PlayerData.citizenid
@@ -44,8 +42,7 @@ end)
 
 -- Get Skin
 
-RegisterServerEvent('cui_character:requestPlayerData')
-AddEventHandler('cui_character:requestPlayerData', function()
+RegisterServerEvent('cui_character:requestPlayerData', function()
     local _source = source
     local Player = QBCore.Functions.GetPlayer(_source)
     local citizenid = Player.PlayerData.citizenid

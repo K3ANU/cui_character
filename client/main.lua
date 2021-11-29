@@ -21,14 +21,6 @@ local oldChar = {}
 
 local currentIdentity = nil
 
-QBCore = nil
-Citizen.CreateThread(function()
-	while QBCore == nil do
-		TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-		Citizen.Wait(200)
-	end
-end)
-
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     TriggerServerEvent('cui_character:requestPlayerData')
     isPlayerReady = true
@@ -76,8 +68,8 @@ function ResetAllTabs()
 end
 
 -- skinchanger/esx_skin replacements
---[[ 
-    Unlike skinchanger, this loads only clothes and does not 
+--[[
+    Unlike skinchanger, this loads only clothes and does not
     re-load other parts of your character (that did not change)
 --]]
 function UpdateClothes(data, updateOld)
@@ -236,7 +228,7 @@ AddEventHandler('skinchanger:change', function(key, val)
 
             DON'T USE IT.
     ]]
-    
+
     local changed = {}
     changed.chain_1 = 'neckarm_1'
     changed.chain_2 = 'neckarm_2'
@@ -906,7 +898,7 @@ function GetComponentsData(id)
                                 end
                             end
                         end
-    
+
                         if not blacklisted then
                             table.insert(result, {
                                 name = label,
@@ -1268,7 +1260,7 @@ function LoadCharacter(data, playIdleWhenLoaded, callback)
     -- Clothing and Accessories
     SetPedComponentVariation(playerPed, 8,  data.tshirt_1, data.tshirt_2, 2)        -- Undershirts
     SetPedComponentVariation(playerPed, 11, data.torso_1,  data.torso_2,  2)        -- Jackets
-    SetPedComponentVariation(playerPed, 3,  data.arms_1,     data.arms_2, 2)  
+    SetPedComponentVariation(playerPed, 3,  data.arms_1,     data.arms_2, 2)
     SetPedComponentVariation(playerPed, 10, data.decals_1, data.decals_2, 2)        -- Decals
     SetPedComponentVariation(playerPed, 4,  data.pants_1,  data.pants_2,  2)        -- Legs
     SetPedComponentVariation(playerPed, 6,  data.shoes_1,  data.shoes_2,  2)        -- Shoes

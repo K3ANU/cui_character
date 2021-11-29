@@ -19,6 +19,14 @@ with
 
 ```TriggerEvent('cui_character:loadClothes', data, charPed)```
 
+**In qb-apartments/fxmanifest.lua in dependencies replace:**
+
+```'qb-clothing',```
+
+with
+
+```'cui_character',```
+
 ## Character Customization Features
 I tried to cover every feature that GTA Online character creator offers, notably:
 

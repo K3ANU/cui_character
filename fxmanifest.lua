@@ -1,19 +1,17 @@
 fx_version 'cerulean'
-games { 'gta5' }
+game 'gta5'
+
+shared_script 'shared/config.lua'
 
 client_scripts {
-    'shared/config.lua',
     --'client/blacklist.lua',
     'client/camera.lua',
     'client/main.lua'
 }
 
-server_scripts {
-    'shared/config.lua',
-    'server/main.lua'
-}
+server_script 'server/main.lua'
 
-ui_page('ui/index.html')
+ui_page 'ui/index.html'
 
 files {
     'ui/index.html',
