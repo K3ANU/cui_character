@@ -1582,3 +1582,17 @@ AddEventHandler('cui_character:loadClothes', function(data, ped)
         SetPedPropIndex (playerPed, 2, data.ears_1, data.ears_2, 2)             -- Ear Accessory
     end
 end)
+
+local function reloadSkin()
+	for k, v in pairs(GetGamePool('CObject')) do
+		if IsEntityAttachedToEntity(PlayerPedId(), v) then
+			SetEntityAsMissionEntity(v, true, true)
+			DeleteObject(v)
+			DeleteEntity(v)
+		end
+	end
+end
+
+RegisterCommand("refreshskin", function(source, args, rawCommand)
+    reloadSkin()
+end)
