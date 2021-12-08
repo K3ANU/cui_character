@@ -374,7 +374,7 @@ function loadClothesTab(tab, clothesData, male) {
         option.text(item.name)
         pantslist.append(option);
     });
-	
+
 	    // arms
     let armslist = tab.find('select#arms.clotheslist');
     clothesData.arms.forEach(function (item) {
@@ -573,8 +573,8 @@ $('#main .menuclose').on('click', function(evt) {
 
     let action = accept ? 'save' : 'discard';
     let message = 'Are you sure you want to ' + action + ' your changes and exit?';
-    let popupData = { 
-        title: 'confirmation', 
+    let popupData = {
+        title: 'confirmation',
         message: message
     };
     openPopup(popupData, closeWindow, accept);
@@ -608,7 +608,7 @@ $(document).on('click', (e) => {
 			node = e.target;
 			} else {
 			}
-    
+
 })
 $(document).on('keydown', (e) => {
 	//console.log(node);
@@ -673,12 +673,12 @@ $(document).on('click', '.list .controls button', function(evt) {
             newVal = oldVal.next();
         }
     }
-	console.log(numOpt);
-	console.log(oldVal);
-	console.log(selectTag);
-	console.log(selectTag);
-	console.log(inputField);
-	console.log(selectTag.selectedIndex);
+	// console.log(numOpt);
+	// console.log(oldVal);
+	// console.log(selectTag);
+	// console.log(selectTag);
+	// console.log(inputField);
+	// console.log(selectTag.selectedIndex);
 	if (inputField !== null) {
 		inputField.value = selectTag.selectedIndex;
 	} else {
@@ -831,7 +831,7 @@ $(document).on('click', 'input:radio[name=sex]', function(evt) {
     if(radioChecked == false)
     {
         let popupData = {
-            title: 'confirmation', 
+            title: 'confirmation',
             message: 'Changing your character\'s gender will reset all current customizations. Are you sure you want to do this?'
         };
         openPopup(popupData, function(target) {
@@ -941,7 +941,7 @@ $(document).on('input', 'input[type=range].headoverlayextra', function(evt) {
 });
 
 /*
-    Face paints are a special (and really complex) case of headoverlay. 
+    Face paints are a special (and really complex) case of headoverlay.
     Some count as makeup and have fixed colors, while others count as blusher and are colorable.
 
     We need to make sure the color palette appears only when appropriate,
@@ -1109,7 +1109,7 @@ function refreshMakeupUI(charData, setDefaultMakeup) {
 
         if (setDefaultMakeup) {
             let makeupoption = null;
-            if ((charData.makeup_type != 2) || 
+            if ((charData.makeup_type != 2) ||
                 ((charData.makeup_1 == 255) && (charData.blush_1 == 255))) {
                 makeupoption = makeupcontent.find('select option').first()
             }
@@ -1179,7 +1179,7 @@ function refreshContentData(element, data) {
     }
 
     /*
-        Special loading path for clothing tab   
+        Special loading path for clothing tab
         Clothing data is not just simple key-value pairs.
     */
     if (element.is('#apparel')) {
@@ -1215,7 +1215,7 @@ function refreshContentData(element, data) {
 
                     /* NOTE: For facepaint list we need an extra check since it has multiple
                              options with duplicated values.
-    
+
                              This part of the code needs to be revised if Rockstar ever adds
                              more colorable facepaint variants.
                     */
