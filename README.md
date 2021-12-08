@@ -3,7 +3,7 @@ An advanced character and clothes editor that aims to be comfortable to use, hid
 
 ## IMPORTANT
 
-**In qb-multicharacter/client/main.lua at line 66 replace:**
+**In qb-multicharacter/client/main.lua at line 65 replace:**
 
 ```TriggerEvent('qb-clothes:client:CreateFirstCharacter')```
 
@@ -11,7 +11,7 @@ with
 
 ```TriggerEvent('cui_character:open', { 'identity', 'features', 'style', 'apparel' }, false)```
 
-**In qb-multicharacter/client/main.lua at line 132 replace:**
+**In qb-multicharacter/client/main.lua at line 131 replace:**
 
 ```TriggerEvent('qb-clothing:client:loadPlayerClothing', data, charPed)```
 
