@@ -11,6 +11,14 @@ with
 
 ```TriggerEvent('cui_character:open', { 'identity', 'features', 'style', 'apparel' }, false)```
 
+**In qb-interior/client/main.lua at line 55 replace:**
+
+```TriggerEvent('qb-clothes:client:CreateFirstCharacter')```
+
+with
+
+```TriggerEvent('cui_character:open', { 'identity', 'features', 'style', 'apparel' }, false)```
+
 **In qb-multicharacter/client/main.lua at line 131 replace:**
 
 ```TriggerEvent('qb-clothing:client:loadPlayerClothing', data, charPed)```
